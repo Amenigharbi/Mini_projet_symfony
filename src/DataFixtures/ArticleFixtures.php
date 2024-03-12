@@ -8,9 +8,9 @@ use app\Entity\Article;
 class ArticleFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
-    {
+     {
         for($i=1;$i<=10;$i++)
-{
+     {
 $article=new Article();
 $article->setTitle("Titre de l'article n° $i")
 ->setContent("<p>Le contenu de l'article n° $i</p>")
@@ -20,5 +20,5 @@ ia_logo.svg")
 $manager->persist($article);
 }
 $manager->flush();
-    }
+}
 }
