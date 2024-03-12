@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -26,7 +25,6 @@ class BlogController extends AbstractController
 public function new(Request $request,EntityManagerInterface
 $entityManager): Response
 {
-// creates a article object and initializes some data for this example
 $article = new Article();
 $article->setCreatedat(new
 \DateTimeImmutable('tomorrow'));
@@ -48,13 +46,11 @@ return $this->render('/blog/create.html.twig', ['form' => $form,]);
 
 }
         
-
-    #[Route('/blog/{id}', name: 'blog_show')]
-    public function show($id, ArticleRepository $repo)
-    {
+ #[Route('/blog/{id}',name:'blog_show')]
+public function show($id,ArticleRepository $repo)
+      {
        $article = $repo->find($id);
-       return $this->render('blog/show.html.twig',['article'=>$article]);
-    }
+       return $this->render('blog show.html.twig'['article'=>$article]);        }
 
 
    
