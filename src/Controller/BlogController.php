@@ -39,19 +39,15 @@ if ($form->isSubmitted() && $form->isValid()) {
 $article = $form->getData();
 $entityManager->persist($article);
 $entityManager->flush();
-
 return $this->redirectToRoute('app_blog');
 }
 return $this->render('/blog/create.html.twig', ['form' => $form,]);
-
 }
-        
- #[Route('/blog/{id}',name:'blog_show')]
+
+#[Route('/blog/{id}',name:'blog_show')]
 public function show($id,ArticleRepository $repo)
       {
        $article = $repo->find($id);
-       return $this->render('blog show.html.twig'['article'=>$article]);        }
-
-
+       return $this->render('blog show.html.twig'['article'=>$article]);           }
    
 }
