@@ -32,21 +32,15 @@ class Article
     private ?\DateTimeInterface $createdAt = null;
 
     public function getId(): ?int
-    {
-        return $this->id;
-    }
+    {return $this->id;}
 
     public function getTitle(): ?string
-    {
-        return $this->title;
-    }
+    {return $this->title; }
 
     public function setTitle(string $title)
     {
         $this->title = $title;
-
-        return $this;
-    }
+        return $this;}
 
     public function getContent(): ?string
     {
