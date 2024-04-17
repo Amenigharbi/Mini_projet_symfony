@@ -41,7 +41,7 @@ class Article
         return $this->title;
     }
 
-    public function setTitle(string $title): static
+    public function setTitle(string $title)
     {
         $this->title = $title;
 
@@ -53,7 +53,7 @@ class Article
         return $this->content;
     }
 
-    public function setContent(?string $content): static
+    public function setContent(?string $content)
     {
         $this->content = $content;
 
@@ -65,7 +65,7 @@ class Article
         return $this->image;
     }
 
-    public function setImage(?string $image): static
+    public function setImage(?string $image)
     {
         $this->image = $image;
 
@@ -77,7 +77,7 @@ class Article
         return $this->createdAt;
     }
 
-    public function setCreatedAt(?\DateTimeInterface $createdAt): static
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
 
